@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="center">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="margin-left" (click)="showSearchPopUp($event)">{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="h">
+  <div *ngIf="showModel == false">
+    <ion-list lines="none">
+      <ion-item id="test" [color]="idx === sent ? 'warning' : 'medium'" *ngFor="let obj of word; let idx = index"
+        (click)="selectItem(obj)">{{obj}}</ion-item>
+    </ion-list>
+  </div>
+  
+</ion-content>

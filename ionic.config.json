@@ -1,0 +1,7 @@
+{
+  "name": "AELCELP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

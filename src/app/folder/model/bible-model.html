@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color: blue;">Go To</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label>Select an option</ion-label>
+      <ion-select [(ngModel)]="selectedValue" (ionChange)="onSelectChange($event)">
+        <ion-select-option value="option1">Option 1</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'CHAPTER' | translate }}</ion-label>
+      <ion-select>TEST</ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'WORD' | translate }}</ion-label>
+      <ion-select>TEST</ion-select>
+    </ion-item>
+    <ion-item>
+      <p>Selected Value: {{ selectedValue }}</p>
+    </ion-item>
+  </ion-list>
+  
+    <ion-button (click)="search()">Go</ion-button>
+    <ion-button (click)="dismiss()">Close</ion-button>
+
+</ion-content>
